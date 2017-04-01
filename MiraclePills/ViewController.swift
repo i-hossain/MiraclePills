@@ -13,22 +13,22 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     let provinces = ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", "Nova Scotia", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan"]
     
-    func showFooter() {
-        provincePicker.isHidden = true
-        countryLabel.isHidden = false
-        countryField.isHidden = false
-        postalLabel.isHidden = false
-        postalField.isHidden = false
-    }
-    
-    
     @IBOutlet weak var provinceBtnText: UIButton!
     @IBOutlet weak var provincePicker: UIPickerView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var countryField: UITextField!
     @IBOutlet weak var postalLabel: UILabel!
     @IBOutlet weak var postalField: UITextField!
+    @IBOutlet weak var buyButton: UIImageView!
     
+    func showFooter() {
+        provincePicker.isHidden = true
+        countryLabel.isHidden = false
+        countryField.isHidden = false
+        postalLabel.isHidden = false
+        postalField.isHidden = false
+        buyButton.isHidden = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +49,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             countryField.isHidden = true
             postalLabel.isHidden = true
             postalField.isHidden = true
+            buyButton.isHidden = true
         }
-        
         else if provincePicker.isHidden == false {
             showFooter()
         }
