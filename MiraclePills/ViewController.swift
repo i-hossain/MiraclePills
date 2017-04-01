@@ -13,9 +13,22 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     let provinces = ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", "Nova Scotia", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan"]
     
+    func showFooter() {
+        provincePicker.isHidden = true
+        countryLabel.isHidden = false
+        countryField.isHidden = false
+        postalLabel.isHidden = false
+        postalField.isHidden = false
+    }
+    
     
     @IBOutlet weak var provinceBtnText: UIButton!
     @IBOutlet weak var provincePicker: UIPickerView!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var countryField: UITextField!
+    @IBOutlet weak var postalLabel: UILabel!
+    @IBOutlet weak var postalField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +43,18 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     
     @IBAction func provinceBtnPressed(_ sender: Any) {
-        provincePicker.isHidden = false
+        if provincePicker.isHidden {
+            provincePicker.isHidden = false
+            countryLabel.isHidden = true
+            countryField.isHidden = true
+            postalLabel.isHidden = true
+            postalField.isHidden = true
+        }
+        
+        else if provincePicker.isHidden == false {
+            showFooter()
+        }
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -47,7 +71,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         provinceBtnText.setTitle(provinces[row], for: UIControlState.normal)
-        provincePicker.isHidden = true
+        showFooter()
     }
 
 }
