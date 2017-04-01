@@ -19,15 +19,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var countryField: UITextField!
     @IBOutlet weak var postalLabel: UILabel!
     @IBOutlet weak var postalField: UITextField!
-    @IBOutlet weak var buyButton: UIImageView!
-    
+    @IBOutlet weak var buyNowBtn: UIButton!
     func showFooter() {
         provincePicker.isHidden = true
         countryLabel.isHidden = false
         countryField.isHidden = false
         postalLabel.isHidden = false
         postalField.isHidden = false
-        buyButton.isHidden = false
+        buyNowBtn.isHidden = false
     }
     
     override func viewDidLoad() {
@@ -49,13 +48,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             countryField.isHidden = true
             postalLabel.isHidden = true
             postalField.isHidden = true
-            buyButton.isHidden = true
+            buyNowBtn.isHidden = true
         }
         else if provincePicker.isHidden == false {
             showFooter()
         }
         
     }
+    
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

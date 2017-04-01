@@ -170,10 +170,13 @@
                                 <rect key="frame" x="78" y="458" width="219" height="133"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buyNowBtn" translatesAutoresizingMaskIntoConstraints="NO" id="zMb-Md-q97">
-                                <rect key="frame" x="68" y="558" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSp-Wn-qG4">
+                                <rect key="frame" x="75.5" y="593" width="225" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="9QK-eb-xdu"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="buyNowBtn"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -207,6 +210,7 @@
                             <constraint firstItem="96T-Be-KIc" firstAttribute="trailing" secondItem="gdI-Bh-Yl3" secondAttribute="trailing" id="cOT-Kt-6ml"/>
                             <constraint firstItem="3pB-gi-jqX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="crr-Vy-fCa"/>
                             <constraint firstItem="N4x-Et-QuG" firstAttribute="leading" secondItem="VPE-uY-gsa" secondAttribute="leading" id="eEX-2o-3eA"/>
+                            <constraint firstItem="xSp-Wn-qG4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ebY-eL-yFf"/>
                             <constraint firstItem="ZZh-rT-jdp" firstAttribute="top" secondItem="bD9-p1-r9Y" secondAttribute="bottom" constant="5" id="eqk-LB-NjA"/>
                             <constraint firstItem="71K-Gs-fjb" firstAttribute="leading" secondItem="96T-Be-KIc" secondAttribute="leading" id="fIc-NB-5NA"/>
                             <constraint firstItem="bD9-p1-r9Y" firstAttribute="leading" secondItem="pYC-bi-GtZ" secondAttribute="leading" id="gFs-pr-Tn5"/>
@@ -220,12 +224,13 @@
                             <constraint firstItem="N4x-Et-QuG" firstAttribute="trailing" secondItem="VPE-uY-gsa" secondAttribute="trailing" id="oFZ-Qq-3iW"/>
                             <constraint firstItem="ZZh-rT-jdp" firstAttribute="trailing" secondItem="bD9-p1-r9Y" secondAttribute="trailing" id="tPX-Ov-dDH"/>
                             <constraint firstItem="ndg-hS-dxK" firstAttribute="leading" secondItem="ZZh-rT-jdp" secondAttribute="leading" id="u7Y-Pw-QB0"/>
+                            <constraint firstItem="xSp-Wn-qG4" firstAttribute="top" secondItem="YCh-x1-4Y5" secondAttribute="top" constant="48" id="vBa-OE-9tF"/>
                             <constraint firstItem="pYC-bi-GtZ" firstAttribute="top" secondItem="WLg-XI-6YO" secondAttribute="bottom" constant="10" id="yYG-rP-HH9"/>
                             <constraint firstItem="YCh-x1-4Y5" firstAttribute="trailing" secondItem="l7A-uy-ANU" secondAttribute="trailing" id="zeY-mR-RQm"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buyButton" destination="zMb-Md-q97" id="Jck-it-Kmx"/>
+                        <outlet property="buyNowBtn" destination="xSp-Wn-qG4" id="yyw-VF-YPf"/>
                         <outlet property="countryField" destination="N4x-Et-QuG" id="loc-Ph-Ze2"/>
                         <outlet property="countryLabel" destination="VPE-uY-gsa" id="Pqa-fS-SeI"/>
                         <outlet property="postalField" destination="YCh-x1-4Y5" id="ReH-zM-fE4"/>
