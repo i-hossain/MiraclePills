@@ -176,7 +176,13 @@
                                     <constraint firstAttribute="width" constant="225" id="9QK-eb-xdu"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyNowBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y6P-3B-CBZ"/>
+                                </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="mGz-jP-mqg">
+                                <rect key="frame" x="98" y="243" width="180" height="180"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -209,10 +215,12 @@
                             <constraint firstItem="0sF-lo-oef" firstAttribute="top" secondItem="71K-Gs-fjb" secondAttribute="bottom" constant="5" id="S57-BJ-XIz"/>
                             <constraint firstItem="pYC-bi-GtZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="SXD-fg-drG"/>
                             <constraint firstItem="l7A-uy-ANU" firstAttribute="leading" secondItem="VPE-uY-gsa" secondAttribute="leading" id="aFX-lP-EhQ"/>
+                            <constraint firstItem="mGz-jP-mqg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bWS-aK-9y8"/>
                             <constraint firstItem="96T-Be-KIc" firstAttribute="trailing" secondItem="gdI-Bh-Yl3" secondAttribute="trailing" id="cOT-Kt-6ml"/>
                             <constraint firstItem="3pB-gi-jqX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="crr-Vy-fCa"/>
                             <constraint firstItem="N4x-Et-QuG" firstAttribute="leading" secondItem="VPE-uY-gsa" secondAttribute="leading" id="eEX-2o-3eA"/>
                             <constraint firstItem="xSp-Wn-qG4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ebY-eL-yFf"/>
+                            <constraint firstItem="mGz-jP-mqg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ecy-3M-ozZ"/>
                             <constraint firstItem="ZZh-rT-jdp" firstAttribute="top" secondItem="bD9-p1-r9Y" secondAttribute="bottom" constant="5" id="eqk-LB-NjA"/>
                             <constraint firstItem="71K-Gs-fjb" firstAttribute="leading" secondItem="96T-Be-KIc" secondAttribute="leading" id="fIc-NB-5NA"/>
                             <constraint firstItem="bD9-p1-r9Y" firstAttribute="leading" secondItem="pYC-bi-GtZ" secondAttribute="leading" id="gFs-pr-Tn5"/>
@@ -241,6 +249,7 @@
                         <outlet property="postalLabel" destination="l7A-uy-ANU" id="GB9-pl-eCM"/>
                         <outlet property="provinceBtnText" destination="0sF-lo-oef" id="Qda-e6-tn5"/>
                         <outlet property="provincePicker" destination="RwJ-uW-RbV" id="I2Q-0z-tfj"/>
+                        <outlet property="successImg" destination="mGz-jP-mqg" id="ncA-Ql-yUH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -251,5 +260,6 @@
     <resources>
         <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>

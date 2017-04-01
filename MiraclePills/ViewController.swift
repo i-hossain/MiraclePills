@@ -20,6 +20,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var postalLabel: UILabel!
     @IBOutlet weak var postalField: UITextField!
     @IBOutlet weak var buyNowBtn: UIButton!
+    @IBOutlet weak var successImg: UIImageView!
+    
+    
     func showFooter() {
         provincePicker.isHidden = true
         countryLabel.isHidden = false
@@ -56,7 +59,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
     }
     
-    
+    @IBAction func buyNowBtnPressed(_ sender: Any) {
+        for view in self.view.subviews as [UIView] {
+            if view == successImg  {
+                view.isHidden = false
+            }
+            else {
+                view.isHidden = true;
+            }
+        }
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
